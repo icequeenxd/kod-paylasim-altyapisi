@@ -50,7 +50,7 @@ app.get("/logout", (req, res) => {
   req.logOut();
   return res.redirect("/");
 });
-mongoose.connect(settings.mongoURL, {
+mongoose.connect(process.env.mongoURL, {
 	useUnifiedTopology: true,
 	useNewUrlParser: true,
 	useFindAndModify: false,
