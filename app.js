@@ -494,7 +494,7 @@ const randomStr = (length) => {
 }
 
 app.listen(process.env.PORT || 3000);
-client.login(settings.token).catch((err) => console.log(err));
+client.login(process.env.token).catch((err) => console.log(err));
 
 client.on("ready", () => {
   console.log("[BOT] Web Site Is Ready!");
